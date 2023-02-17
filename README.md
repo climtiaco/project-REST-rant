@@ -2,6 +2,19 @@
 
 ## REST-Rant is an app where users can review restaurants.
 
+- [] Method: Get | Path: / | Purpose: Home Page
+- [] Method: Get | Path: /places | Purpose: Places index page
+- [] Method: POST | Path: /places | Purpose: Create New Place
+- [] Method: Get | Path: /places/new | Purpose: From page for creating a new place
+- [] Method: Get | Path: /places/:id | Purpose: Details about a particular place
+- [] Method: PUT | Path: /places/:id | Purpose: Update a particular place
+- [] Method: Get | Path: /places/:id/edit | Purpose: Form page for editing an existing place
+- [] Method: Delete | Path: /places/:id | Purpose: Delete a particular place
+- [] Method: POST | Path: /places/:id/rant | Purpose: Create a rant (comment) about a particular place
+- [] Method: Delete | Path: /places/:id/rant/:rantId | Purpose: Delete a rant (comment) about a particular place
+- [] Method: Get | Path: * | Purpose: 404 page (matches any route not defined above)
+
+
 
 
 # **Bonus:**
