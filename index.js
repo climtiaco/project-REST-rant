@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 //Page Not Found .... Found out that this is what's making my page crash
 // 2.15.23 Fixed my issue with the app crashing by adding backticks to the res.send
 app.get('*', (req, res) => {
-     res.status(404).send(`<h1>404 Page</h1>`)
+     res.render('error404')
 })
 
 app.listen(process.env.PORT)
