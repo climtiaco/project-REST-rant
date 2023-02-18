@@ -14,20 +14,31 @@
 - [] Method: Delete | Path: /places/:id/rant/:rantId | Purpose: Delete a rant (comment) about a particular place
 - [] Method: Get | Path: * | Purpose: 404 page (matches any route not defined above)
 
-| Method |      Path                | Purpose 
-| ------ | ------------------------ | -------
-| Get    |          /               | Home Page
-| Get    |  /places                 | Places index page
-| Post   |  /places                 | Create new place
-| Get    | /places/new              | Form page for creating a new place
-| Get    | /places/:id              | Details about a particular palce
-| Put    | /places/:id              | Update a particular place
-| Get    | /places/:id/edit         | Form page for editing an existing places
-| Delete | /places/:id              | Delete a particular place
-| Post   | /places/:id/rant         | Create a rant (comment) about a particular place
-| Delete | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place
-| Get    |         *                | 404 page (matches any route not defined above)
+# Routes
+| Method |      Path                | Purpose                                          |
+| ------ | ------------------------ | -------------------------------------------------|
+| Get    |          /               | Home Page                                        |
+| Get    |  /places                 | Places index page                                |    
+| Post   |  /places                 | Create new place                                 |
+| Get    | /places/new              | Form page for creating a new place               |
+| Get    | /places/:id              | Details about a particular palce                 |
+| Put    | /places/:id              | Update a particular place                        |
+| Get    | /places/:id/edit         | Form page for editing an existing places         |
+| Delete | /places/:id              | Delete a particular place                        |
+| Post   | /places/:id/rant         | Create a rant (comment) about a particular place |
+| Delete | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place |
+| Get    |         *                | 404 page (matches any route not defined above)   |
 
+# Database
+## places
+| Field     |  Type      |
+|-----------|------------|
+| _id       | Object ID  |
+| name      | String     |
+| city      | String     |
+| state     | String     |
+| cuisines  | String     |
+| pic       | String     |
 
 
 
