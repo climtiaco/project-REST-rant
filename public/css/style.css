@@ -2,3 +2,26 @@ h1 {
     text-align: center;
     color: cornflowerblue;
 }
+
+#greenfood {
+    width: 50vh;
+    height: 50vh;
+}
+
+#error {
+    text-align: center;
+}
+
+#ricky {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/* I was trying to center the photos but need to find a different way to do it.
+#indexpic {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+} */
