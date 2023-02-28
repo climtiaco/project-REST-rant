@@ -35,6 +35,6 @@ app.get('*', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log("I AM ALIVE");
+    console.log("I AM ALIVE on 3000");
 })
 
