@@ -3,11 +3,11 @@ const Def = require('../default')
 
 
 function placesIndex ({places}) {
-    let placesFormatted = places.map((place) => {
+    let placesFormatted = places.map((place, index) => {
     return (
         <div className="col-sm-6">
             <h2>
-                <a href={`/places/${place}`} >
+                <a href={`/places/${index}`} >
                 {place.name}
                     </a>
                 </h2>

@@ -2,6 +2,7 @@ require('dotenv').config()
 
 //
 const express = require('express')
+const methodOverride = require('method-override')
 const app = express()
 const PORT = process.env.PORT;
 //How Omar did his
@@ -15,6 +16,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 
 // Also if I uncomment this part, the app crashes
 // 2.15.23 This is still breaking my app right now so not sure quite yet whats happening. Tried going into my places.js to add more backticks to see if that was the issue but it was not
