@@ -6,7 +6,7 @@ function new_form () {
         <Def>
             <main>
                 <h1>Add a New place</h1>
-                <form method="GET" action="/places">
+                <form method="POST" action="/places">
                     <div className="form-group">
                         <label>Place Name </label>
                         <input className="form-control" id="name" name="name" required />
