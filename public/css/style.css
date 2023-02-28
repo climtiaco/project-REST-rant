@@ -18,6 +18,11 @@ h1 {
     margin-right: auto;
     width: 50%;
 }
+
+img {
+    display: grid;
+    grid-gap: 1rem;
+}
 /* I was trying to center the photos but need to find a different way to do it.
 #indexpic {
     display: block;

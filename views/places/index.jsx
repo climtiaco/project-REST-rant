@@ -10,7 +10,7 @@ function placesIndex ({places}) {
             <p className="text-center">
                 {place.cuisines}
             </p>
-            <img src={place.pic} width="400" height="300" className="indexpic" alt={place.name}></img>
+            <img src={place.pic} width="400" height="300" className="mx-auto" alt={place.name}></img>
             <p className="text-center">
                 Located in {place.city}, {place.state}
             </p>
