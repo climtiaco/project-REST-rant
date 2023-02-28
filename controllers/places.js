@@ -26,11 +26,24 @@ router.get('/', (req, res) => {
 })
 //Activity rest-rant part 5 (I might have messed up here for part 2)
 
+//Commented this code out because watching the video back where you ran through the entire project again, I didn't see this in your code. It was breaking my code previously, but now its not doing that anymore. Maybe its bc I corrected everything correctly in the post route above.
+// router.post('/', (req, res) => {
+//   console.log(req.body)
+//   res.send('POST /places')
+// })
 
-router.post('/', (req, res) => {
-  console.log(req.body)
-  res.send('POST /places')
-})
+router.get('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  } 
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.render('places/show', { place: places[id] }) 
+  }
+});
 
 
 module.exports = router
