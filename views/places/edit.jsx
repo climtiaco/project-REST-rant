@@ -1,13 +1,13 @@
 const React = require('react')
 const Def = require('../default.jsx')
 
-function edit_form ({ place }) {
+function edit_form ({ place, id }) {
     return (
         <Def>
             <main>
                 <h1>Edit Place</h1>
-                {/* This link thats supposed to lead back to editing the page is broken */}
-                <form method="POST" action={`/places/${place.id}?_method=PUT`} >
+                {/* This route is correct because when I click the edit button, it takes me to the correct edit page. But when I choose submit, it doesn't take me to the correct place */}
+                <form method="POST" action={`/places/${id}?_method=PUT`} >
                     <div className="form-group">
                         <label>Place Name </label>
                         <input className="form-control" id="name" name="name" required />

@@ -42,6 +42,7 @@ router.get('/:id', (req, res) => {
   }
 });
 
+//Delete
 router.delete('/:id', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id) || !places[id]) {
@@ -53,6 +54,8 @@ router.delete('/:id', (req, res) => {
   }
 })
 
+//Edit
+// The button works, but it doesn't resave to the info that I place in the edit features. So I think the issue is either with this route or with the put route.
 router.get('/:id/edit', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
@@ -62,7 +65,35 @@ router.get('/:id/edit', (req, res) => {
       res.render('error404')
   }
   else {
-    res.render('places/edit', { place: places[id] })
+    res.render('places/edit', { place: places[id], id })
+  }
+})
+
+//Put route
+router.put('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+      // Dig into req.body and make sure data is valid
+      if (!req.body.pic) {
+          // Default image if one is not provided
+          req.body.pic = 'https://unsplash.com/photos/y3aP9oo9Pjc'
+      }
+      if (!req.body.city) {
+          req.body.city = 'Anytown'
+      }
+      if (!req.body.state) {
+          req.body.state = 'USA'
+      }
+
+      // Save the new data into places[id]
+      places[id] = req.body
+      res.redirect(`/places/${id}`)
   }
 })
 
